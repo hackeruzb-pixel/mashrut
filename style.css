@@ -319,55 +319,117 @@ h2 {
 .slide-img {
   animation: glowPulse 3s infinite ease-in-out;
 }
+/* ===== TITUL SLIDE (PRO LEVEL) ===== */
 .title-slide {
   position: relative;
   height: 100%;
-  padding: 40px;
+  padding: 50px;
   font-family: 'Times New Roman', serif;
-  background: #fff;
+
+  /* Dark glass background */
+  background: linear-gradient(135deg, #0d1117, #1a1a2e);
+  border-radius: 16px;
+
+  box-shadow: inset 0 0 80px rgba(0,0,0,0.6);
+  overflow: hidden;
+}
+
+/* Light overlay (paper effect) */
+.title-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(8px);
 }
 
 /* O‘ng taraf (vertikal matn) */
 .title-right {
   position: absolute;
-  right: 20px;
+  right: 10px;
   top: 20px;
+
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  font-size: 14px;
-  line-height: 1.6;
+
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.7);
+
+  letter-spacing: 1px;
 }
 
 /* Markaz */
 .title-center {
   text-align: center;
-  margin-top: 120px;
+  margin-top: 100px;
+  position: relative;
+  z-index: 2;
 }
 
 .title-center h1 {
-  font-size: 48px;
-  font-weight: bold;
-  letter-spacing: 2px;
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: 4px;
+
+  color: #fff;
+
+  text-shadow:
+    0 0 20px rgba(0,245,212,0.4),
+    0 0 40px rgba(255,77,109,0.2);
 }
 
 .title-center .tema {
-  margin-top: 20px;
-  font-size: 18px;
+  margin-top: 25px;
+  font-size: 20px;
+  color: rgba(255,255,255,0.85);
 }
 
 /* Chap taraf */
 .title-left {
   position: absolute;
   left: 40px;
-  bottom: 120px;
+  bottom: 140px;
+
   font-size: 16px;
   line-height: 2;
+  color: rgba(255,255,255,0.85);
+}
+
+/* Chiziqlar (imzo uchun) */
+.title-left p {
+  position: relative;
+  margin: 10px 0;
+}
+
+.title-left p::after {
+  content: "";
+  display: block;
+  width: 220px;
+  height: 1px;
+  background: rgba(255,255,255,0.4);
+  margin-top: 6px;
 }
 
 /* Pastki yozuv */
 .title-footer {
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   left: 40px;
+
   font-size: 16px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* Neon line decoration */
+.title-slide::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+
+  background: linear-gradient(90deg, #00f5d4, #ff4d6d);
+  box-shadow: 0 0 20px rgba(0,245,212,0.6);
 }
