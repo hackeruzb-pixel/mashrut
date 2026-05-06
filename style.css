@@ -319,3 +319,55 @@ h2 {
 .slide-img {
   animation: glowPulse 3s infinite ease-in-out;
 }
+.title-slide {
+  position: relative;
+  height: 100%;
+  padding: 40px;
+  font-family: 'Times New Roman', serif;
+  background: #fff;
+}
+
+/* O‘ng taraf (vertikal matn) */
+.title-right {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Markaz */
+.title-center {
+  text-align: center;
+  margin-top: 120px;
+}
+
+.title-center h1 {
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.title-center .tema {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* Chap taraf */
+.title-left {
+  position: absolute;
+  left: 40px;
+  bottom: 120px;
+  font-size: 16px;
+  line-height: 2;
+}
+
+/* Pastki yozuv */
+.title-footer {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  font-size: 16px;
+}
